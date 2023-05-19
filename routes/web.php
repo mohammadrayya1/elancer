@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\CategoriesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+//Route::get("/categories",function (){
+//    return "Categories";
+//});
+
+
+Route::get("/categories",[CategoriesController::class,"index"]);
+Route::get("categories/{id}",[CategoriesController::class,"show"]);
