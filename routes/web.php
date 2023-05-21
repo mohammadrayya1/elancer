@@ -24,4 +24,10 @@ Route::get('/', function () {
 
 
 Route::get("/categories",[CategoriesController::class,"index"]);
+Route::get("categories/create",[CategoriesController::class,"create"]);
 Route::get("categories/{id}",[CategoriesController::class,"show"]);
+Route::post("categories",[CategoriesController::class,"store"]);
+Route::get("categories/edit/{id}",[CategoriesController::class,"edit"]);
+Route::put("categories/{id}",[CategoriesController::class,"update"]);
+Route::delete("categories/{id}",[CategoriesController::class,"destroy"]);
+
